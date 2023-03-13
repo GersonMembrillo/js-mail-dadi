@@ -12,3 +12,28 @@ Prima di partire a scrivere codice poniamoci qualche domanda:
 Che ci sia un array da qualche parte?
 Se dobbiamo confrontare qualcosa che "cosa" ci serve?
 */
+
+const invitedEmail = [
+	'cicciopasticcio@gmail.com',
+	'chimichanga@icloud.com',
+	'pincopallino@hotmail.com',
+];
+
+const btnEmail = document.querySelector('.button-email');
+btnEmail.addEventListener('click', checkList);
+const firstCard = document.getElementById('first-card');
+
+function checkList(e) {
+	let invited = '';
+	const search = document.getElementById('email').value;
+	for (let i = 0; i < invitedEmail.length; i++) {
+		if (invitedEmail[i] === search) {
+			invited = invitedEmail[i];
+		}
+	}
+	if (invited) {
+		firstCard.innerHTML += `<h1>la tua email è nella lista, Benvenuto</h1>`;
+	} else {
+		firstCard.innerHTML += `<h1>TU!<br>NON PUOI!<br>PASSARE!</h1>`;
+	}
+}

@@ -14,10 +14,47 @@
 		<title>Mail&Dadi</title>
 	</head>
 	<body>
-		<div class="wrapper">
-			<div class="buttons d-flex justify-content-center gap-2 p-2">
-				<button type="button" class="btn btn-primary">Email</button>
-				<button type="button" class="btn btn-danger">Dadi</button>
+		<div class="container">
+			<div class="buttons">
+				<p class="d-flex p-2 justify-content-center gap-2">
+					<button
+						class="btn btn-primary"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapseExample"
+						aria-expanded="false"
+						aria-controls="collapseExample"
+					>
+						Email
+					</button>
+					<button
+						class="btn btn-danger"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapseExample2"
+						aria-expanded="false"
+						aria-controls="collapseExample2"
+					>
+						Gioco dei Dadi
+					</button>
+				</p>
+				<div class="collapse" id="collapseExample">
+					<div id="first-card" class="card card-body">
+						<form>
+							<div class="mb-3">
+								<label for="email" class="form-label">Email address</label>
+								<input type="email" class="form-control" id="email" aria-describedby="emailHelp" />
+								<div id="emailHelp" class="form-text">
+									Check your email if you don't know you are invited.
+								</div>
+							</div>
+							<button type="submit" class="btn btn-primary button-email">Submit</button>
+						</form>
+					</div>
+				</div>
+				<div class="collapse" id="collapseExample2">
+					<div class="card card-body">ihihihhi</div>
+				</div>
 			</div>
 			<div id="button-content">
 				<!-- <form>
