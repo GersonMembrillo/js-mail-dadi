@@ -37,3 +37,8 @@ function checkList(e) {
 		firstCard.innerHTML += `<h1>TU!<br>NON PUOI!<br>PASSARE!</h1>`;
 	}
 }
+
+const btnGame = document.querySelector('.button-game');
+btnEmail.addEventListener('click', checkGame);
+
+/* MI FERMO PERHCE NON STO MOLTO BENE */
