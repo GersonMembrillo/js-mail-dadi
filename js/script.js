@@ -34,11 +34,22 @@ function checkList(e) {
 	if (invited) {
 		firstCard.innerHTML += `<h1>la tua email è nella lista, Benvenuto</h1>`;
 	} else {
-		firstCard.innerHTML += `<h1>TU!<br>NON PUOI!<br>PASSARE!</h1>`;
+		firstCard.innerHTML += `<img class="pt-3" src="./img/tunonpuoipassare.gif" alt="">`;
 	}
 }
 
-const btnGame = document.querySelector('.button-game');
-btnEmail.addEventListener('click', checkGame);
+let myNumber = (document.getElementById('demo').innerHTML += Math.floor(Math.random() * 6) + 1);
+
+let gameNumber = (document.getElementById('demo2').innerHTML += Math.floor(Math.random() * 6) + 1);
+
+let winner = document.querySelector('.winner');
+
+if (myNumber > gameNumber) {
+	winner.innerHTML += `HAI VINTO`;
+} else if (myNumber < gameNumber) {
+	winner.innerHTML += `HA VINTO IL GIOCO`;
+} else {
+	winner.innerHTML += `PAREGGIO`;
+}
 
 /* MI FERMO PERHCE NON STO MOLTO BENE */
